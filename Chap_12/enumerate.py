@@ -1,5 +1,5 @@
 # Enumerate in action
-words = ['Hey', 'there']
+words = ["Hey", "there"]
 for i, word in enumerate(words, 1):
     print(f"'Word #{i}: <{word}> has {len(word)} letters.'")
 
@@ -19,7 +19,7 @@ for i, (start, end) in enumerate(zip(pages, pages[1:]), 1):
 nums = [4071, 53901, 96045, 84886, 5228, 20108, 42468, 89385, 22040, 18800, 4071]
 odd = lambda x: x % 2
 
-result = [i for i,num in enumerate(nums) if odd(num)]
+result = [i for i, num in enumerate(nums) if odd(num)]
 print(result)
 
 print()

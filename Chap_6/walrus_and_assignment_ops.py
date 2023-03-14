@@ -23,7 +23,7 @@ while inp:
     inp = input()
 
 # With walrus(in while loops)
-while inp := input(' >> '):
+while inp := input(" >> "):
     eval(inp)
 
 
@@ -31,12 +31,12 @@ while inp := input(' >> '):
 # Without walrus
 def trailing_zeros(n):
     s = str(n)
-    return len(s) - len(s.rstrip('0'))
+    return len(s) - len(s.rstrip("0"))
 
 
 # With walrus
 def trailing_zeros_2(n):
-    return len(s := str(n)) - len(s.rstrip('0'))
+    return len(s := str(n)) - len(s.rstrip("0"))
 
 
 # Context 3
@@ -53,22 +53,22 @@ facts_4 = [num for num in map(factorial, l) if trailing_zeros_2(num) > 50]
 
 # Context 4
 # Without walrus
-string = input('Your contact info: >> ')
-email = re.search(r'\b(\w+@\w+\.com)\b', string)
+string = input("Your contact info: >> ")
+email = re.search(r"\b(\w+@\w+\.com)\b", string)
 if email:
-    print(f'Your email is {email.group(1)}')
+    print(f"Your email is {email.group(1)}")
 else:
-    phone = re.search(r'\d{9}',string)
+    phone = re.search(r"\d{9}", string)
     if phone:
-        print(f'Your phone is {phone.group(1)}')
+        print(f"Your phone is {phone.group(1)}")
     else:
-        print('No info found...')
+        print("No info found...")
 
 # With walrus
-string = input('Your contact info: >> ')
-if email := re.search(r'\b(\w+@\w+\.com)\b', string):
-    print(f'Your email is {email.group(1)}')
-elif phone := re.search(r'\d{9}',string):
-    print(f'Your phone is {phone.group(1)}')
+string = input("Your contact info: >> ")
+if email := re.search(r"\b(\w+@\w+\.com)\b", string):
+    print(f"Your email is {email.group(1)}")
+elif phone := re.search(r"\d{9}", string):
+    print(f"Your phone is {phone.group(1)}")
 else:
-    print('No info found...')
+    print("No info found...")

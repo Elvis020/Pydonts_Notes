@@ -4,7 +4,7 @@ head, *tail = lst
 print(head)
 print(tail)
 print()
-string = 'Hello!'
+string = "Hello!"
 *start, last = string
 print(start)
 print(last)

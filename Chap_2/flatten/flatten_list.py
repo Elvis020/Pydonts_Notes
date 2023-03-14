@@ -1,5 +1,5 @@
 from itertools import chain
- 
+
 
 def flatten_a_list(lst):
     """This simply flattens a list on level deep"""
